@@ -1,0 +1,78 @@
+var data = {
+    state: {
+        itemsTitle: [
+            "Name & Gender & Email",
+            "Phone & Date of Birth",
+            "Country & Gender",
+            "Passport & National ID",
+            "Passport & National ID",
+            "Bank Name & Account No.",
+            "Account Type & IBN",
+        ],
+    },
+};
+/* 
+// {{-- <tbody>
+//     @foreach ($generalsInformation as $information)
+//         <tr class="border border-solid border-slate-400 ">
+//             <td class="p-1 flex gap-2">
+//                 <p>
+//                     {{ $information->name }} <br />
+//                     {{ $information->gender }}  
+//                 </p>
+                
+//                 @if (file_exists($information->image))
+//                     <img src="{{ asset($information->image) }}" width="50" height="50" class="rounded-full" alt="">
+//                 @endif
+//             </td>
+//             <td class="p-1 border border-solid border-slate-400">
+//                 {{ $information->phone }} <br />
+//                 {{ $information->email }}  
+//             </td>
+//             <td class="p-1 border border-solid border-slate-400">
+//                 {{ $information->date_of_birth }} <br />
+//                 {{ $information->country_name }} ({{ $information->country_code }})  <br />
+//             </td>
+//             <td class="p-1 border border-solid border-slate-400">
+//                 {{ $information->passport }} <br />
+//                 {{ $information->nid }}
+//             </td>
+//             <td class="p-1 border border-solid border-slate-400">
+//                 {{ $information->bank_name }} <br />
+//                 {{ $information->account_no }}
+//             </td>
+//             <td class="p-1 border border-solid border-slate-400">
+//                 {{ $information->account_type }} <br />
+//                 {{ $information->ibn }}
+//             </td>
+//             <td class="p-1 flex justify-evenly h-full">
+//                 <button class="mt-2.5 uppercase font-mono font-medium py-0.5 px-2.5 text-sm bg-yellow-400 rounded-full text-slate-900 duration-300 hover:bg-yellow-600" v-on:click="editGeneralInformationHandler({{ $information }})">edit</button>
+//                 <button class="mt-2.5 uppercase font-mono font-medium py-0.5 px-2.5 text-sm bg-red-400 rounded-full text-slate-100 duration-300 hover:bg-red-600" v-on:click="closeToast">delete</button>
+//             </td>
+//         </tr>
+//     @endforeach
+// </tbody> --}} */
+
+// if(result?.status === 'success') {
+//     clearInputs();
+//     isEdit.value = false;
+//     generalsInformation.value.unshift(result?.data)
+// };
+/* console.log('Form Data', {
+                        name: name.value,
+                        email: email.value,
+                        phone: phone.value,
+                        dateOfBirth: dateOfBirth.value,
+                        gender: gender.value,
+                        image: image.value,
+                        passport: passport.value,
+                        bankName: bankName.value,
+                        accountNo: accountNo.value,
+                        ibn: ibn.value,
+                        accountType: accountType.value,
+                        nid: nid.value,
+                        countryName: selectedCountry.value.name,
+                        countryCode: selectedCountry.value.code,
+                    }) */
+
+// closeToast();
