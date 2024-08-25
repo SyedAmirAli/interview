@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Example in your HTML file -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Assignment</title>
-    {{-- @vite(['resources/js/app.js', 'resources/css/app.css'])
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    --}}
 
     <style>
         input, select, textarea {
@@ -18,7 +14,6 @@
     </style>
     <script>
         var baseUrl = "{{ url('/api') }}";
-        // var asset = "{{ asset('/') }}";
     </script>
 
     <script src="{{ asset('/assets/js/vue.js') }}"></script>
@@ -72,11 +67,13 @@
                                 />
                             </div>
                             <div class="w-full flex flex-col rounded-xl bg-slate-50 border border-dashed border-slate-200 px-4 py-2 mt-4 relative">    
-                                <label for="country" class="text-lg uppercase font-semibold text-slate-500">Country<span class="text-red-500 font-bold px-1">*</span></label>
+                                <label for="country_" class="text-lg uppercase font-semibold text-slate-500">Country<span class="text-red-500 font-bold px-1">*</span></label>
                                 <input v-on:click="handleActiveCountries" type="text" 
                                     placeholder="e.g. United State of America"
+                                    autocomplete="off"
                                     v-on:input="countryChangeHandler" 
                                     :value="selectedCountry.name"
+                                    name="country"
                                     class="bg-slate-100 rounded-md outline-none ring-[0] focus:border-primary-main border border-solid border-slate-300" 
                                 />
                                 {{-- <input type="hidden" :value='JSON.stringify(selectedCountry)'  id="country" name="country"> --}}
@@ -259,23 +256,20 @@
         </div>
     </div>
 
-    <!-- Laravel -->
-    <script>
-        const countries = @json($countries);
-        const lowercaseStr = str => str.toLowerCase().replace(/\s+/g, '');
-    </script>
-
+    <!-- Usage OF Vue.js -->
     <script>
         const { createApp, ref, watch } = Vue;
+        const lowercaseStr = str => str.toLowerCase().replace(/\s+/g, '');
         
         const app = Vue.createApp({
             setup(){
-                const countriesArray = Object.values(countries);
-                const countriesRef = ref(countriesArray);
                 const asset = ref("{{ asset('/') }}");
+                const countriesArray = Object.values(@json($countries));
+                const generalsInformation = ref(@json($generalsInformation));
+
+                const countriesRef = ref(countriesArray);
                 const isActiveCountries = ref(false);
                 const selectedCountry = ref({ code:'', name:'', index:undefined });
-                const generalsInformation = ref(@json($generalsInformation));
 
                 // laravel csrf token
                 const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
