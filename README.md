@@ -28,7 +28,7 @@ Ensure you have the following installed on your system:
 
     ```bash
     git clone https://github.com/SyedAmirAli/interview.git
-    cd yourproject
+    cd interview
     ```
 
 2. **Install PHP dependencies:**
