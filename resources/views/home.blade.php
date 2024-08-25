@@ -35,7 +35,7 @@
                         <div class="w-full">
                             <div class="w-full flex flex-col rounded-xl bg-slate-50 border border-dashed border-slate-200 px-4 py-2">    
                                 <label for="name" class="text-lg uppercase font-semibold text-slate-500">Name: <span class="text-red-500 font-bold px-1">*</span></label>
-                                <input type="text" id="name" name="name" {{-- required --}}
+                                <input type="text" id="name" name="name" 
                                     {{-- :value="name.value" --}}
                                     {{-- v-on:input="(e)=> name.value = e.target.value" --}}
                                     v-model="name"
@@ -45,7 +45,7 @@
                             </div>
                             <div class="w-full flex flex-col rounded-xl bg-slate-50 border border-dashed border-slate-200 px-4 py-2 mt-4">    
                                 <label for="email" class="text-lg uppercase font-semibold text-slate-500">E-mail:<span class="text-red-500 font-bold px-1">*</span></label>
-                                <input type="email" id="email" name="email" {{-- required --}}
+                                <input type="email" id="email" name="email" 
                                     v-model="email"
                                     placeholder="e.g. example@gmail.com"
                                     class="bg-slate-100 rounded-md outline-none ring-[0] focus:border-primary-main border border-solid border-slate-300" 
@@ -53,7 +53,7 @@
                             </div>
                             <div class="w-full flex flex-col rounded-xl bg-slate-50 border border-dashed border-slate-200 px-4 py-2 mt-4">    
                                 <label for="phone" class="text-lg uppercase font-semibold text-slate-500">Phone Number<span class="text-red-500 font-bold px-1">*</span></label>
-                                <input type="text" id="phone" name="phone" {{-- required --}}
+                                <input type="text" id="phone" name="phone" 
                                     v-model="phone"
                                     placeholder="e.g. 0********"
                                     class="bg-slate-100 rounded-md outline-none ring-[0] focus:border-primary-main border border-solid border-slate-300" 
@@ -61,7 +61,7 @@
                             </div>
                             <div class="w-full flex flex-col rounded-xl bg-slate-50 border border-dashed border-slate-200 px-4 py-2 mt-4">    
                                 <label for="date_of_birth" class="text-lg uppercase font-semibold text-slate-500">Date of Birth<span class="text-red-500 font-bold px-1">*</span></label>
-                                <input type="date" id="date_of_birth" name="date_of_birth" {{-- required --}}
+                                <input type="date" id="date_of_birth" name="date_of_birth" 
                                     v-model="dateOfBirth"
                                     class="bg-slate-100 rounded-md outline-none ring-[0] focus:border-primary-main border border-solid border-slate-300" 
                                 />
@@ -76,7 +76,6 @@
                                     name="country"
                                     class="bg-slate-100 rounded-md outline-none ring-[0] focus:border-primary-main border border-solid border-slate-300" 
                                 />
-                                {{-- <input type="hidden" :value='JSON.stringify(selectedCountry)'  id="country" name="country"> --}}
                                 <div :class="{hidden: !isActiveCountries}" class="absolute left-0 top-20 mt-3 z-10 w-full bg-slate-100 border border-solid border-slate-300 rounded-xl p-4">
                                     <ul class="w-full max-h-48 overflow-y-scroll flex flex-col gap-2">
                                         <li v-for="(country, index) in countriesRef" class="pr-3" v-on:click="handleActiveCountries(country, index)">
@@ -88,7 +87,7 @@
                             <div class="w-full flex rounded-xl bg-slate-50 border border-dashed border-slate-200 px-4 py-2 mt-3 relative gap-4">    
                                 <label for="gender" class="text-lg uppercase font-semibold text-slate-500">Gender: <span class="text-red-500 font-bold px-1">*</span></label>
                                 <div class="ml-6 flex gap-1 items-center justify-center">
-                                    <input type="radio" id="male" name="gender" value="male" {{-- required --}} v-model="gender">
+                                    <input type="radio" id="male" name="gender" value="male"  v-model="gender">
                                     <label for="male">Male</label>
                                 </div>
                                 <div class="ml-6 flex gap-1 items-center justify-center">
@@ -98,7 +97,7 @@
                             </div>
                             <div class="w-full flex flex-col rounded-xl bg-slate-50 border border-dashed border-slate-200 px-4 py-2 mt-4">    
                                 <label for="nid" class="text-lg uppercase font-semibold text-slate-500">National ID<span class="text-red-500 font-bold px-1">*</span></label>
-                                <input type="text" id="nid" name="nid" {{-- required --}} v-model="nid"
+                                <input type="text" id="nid" name="nid"  v-model="nid"
                                     placeholder="e.g. ********"
                                     class="bg-slate-100 rounded-md outline-none ring-[0] focus:border-primary-main border border-solid border-slate-300" 
                                 />
@@ -152,7 +151,7 @@
                         
                             <div class="w-full flex flex-col rounded-xl bg-slate-50 border border-dashed border-slate-200 px-4 py-2 mt-3">    
                                 <label for="accountType" class="text-lg uppercase font-semibold text-slate-500">Account Type<span class="text-red-500 font-bold px-1">*</span></label>
-                                <select id="accountType" name="accountType" {{-- required --}} v-model="accountType"
+                                <select id="accountType" name="accountType"  v-model="accountType"
                                     class="bg-slate-100 rounded-md outline-none ring-[0] focus:border-primary-main border border-solid border-slate-300" 
                                 >
                                     <option value="">Select account type</option>
